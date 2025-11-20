@@ -20,20 +20,23 @@ public class Calculator {
             System.out.println("Enter an operator " + "(+, -, *, /)");
             String operatorInput = scanner.next();
 
-            if(operatorInput.equals("+")){
-                double userAnswer = num1 + num2;
-                System.out.println("Result: " + userAnswer);
-            }else if(operatorInput.equals("-")){
-                double userAnswer = num1 - num2;
-                System.out.println("Result: " + userAnswer);
-            }else if(operatorInput.equals("*")){
-                double userAnswer = num1 * num2;
-                System.out.println("Result: " + userAnswer);
-            }else if(operatorInput.equals("/")){
-                double userAnswer = num1 / num2;
-                System.out.println("Result: " + userAnswer);
-            }else{
-                System.out.println("Invalid operator");
+            switch(operatorInput){
+                case "+" -> {
+                    double userAnswer = num1 + num2;
+                    System.out.println("Result " + userAnswer);
+                }
+                case "-" -> {
+                    double userAnswer = num1 - num2;
+                    System.out.println("Result " + userAnswer);
+                }
+                case "*" -> {
+                    double userAnswer = num1 * num2;
+                    System.out.println("Result " + userAnswer);
+                }
+                case "/" -> {
+                    double userAnswer = num1 / num2;
+                    System.out.println("Result " + userAnswer);
+                }
             }
 
         }
