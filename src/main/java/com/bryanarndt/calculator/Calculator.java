@@ -37,7 +37,12 @@ public class Calculator {
                     double userAnswer = num1 / num2;
                     System.out.println("Result " + userAnswer);
                 }
-                System.out.println("Calculate more? Yes or No");
+            }
+            System.out.println("Calculate more? Yes or No");
+            String userInput = scanner.next();
+
+            if(userInput.equals("no")){
+                continueCalculating = false;
             }
 
         }
