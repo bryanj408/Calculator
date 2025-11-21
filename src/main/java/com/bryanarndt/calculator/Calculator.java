@@ -48,9 +48,10 @@ public class Calculator {
             System.out.println("Calculate more? Yes or No");
             String userInput = scanner.next();
 
-            //Exits while loop if user enters "no"
-            if(userInput.equals("no")){
+            //Exits while loop if user enters "no". equalsIgnoreCase() is similar to toLowerCase()
+            if(userInput.equalsIgnoreCase("no")){
                 continueCalculating = false;
+                scanner.close();
             }
 
         }
