@@ -20,6 +20,7 @@ public class Calculator {
             System.out.println("Enter an operator " + "(+, -, *, /)");
             String operatorInput = scanner.next();
 
+            //Checks user's operator input, division by zero, and invalid operators
             switch(operatorInput){
                 case "+" -> {
                     double userAnswer = num1 + num2;
@@ -35,12 +36,20 @@ public class Calculator {
                 }
                 case "/" -> {
                     double userAnswer = num1 / num2;
+                    if(num2 == 0){
+                        System.out.println("You cannot divide by zero");
+                    }
                     System.out.println("Result " + userAnswer);
                 }
+                default -> {
+                    System.out.println(operatorInput + " is an invalid operator.");
+                }
             }
+            //if user enters "yes", continueCalculating=true and loops continues
             System.out.println("Calculate more? Yes or No");
             String userInput = scanner.next();
 
+            //Exits while loop if user enters "no"
             if(userInput.equals("no")){
                 continueCalculating = false;
             }
